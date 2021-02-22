@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/v_header"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/activity_header"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/vRefreshLayout"
+            android:layout_below="@+id/v_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/v_recy_start"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+            android:id="@+id/v_delete"
+            android:layout_width="match_parent"
+            android:text="删除"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@color/cl_red"
+            android:layout_alignParentBottom="true"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>

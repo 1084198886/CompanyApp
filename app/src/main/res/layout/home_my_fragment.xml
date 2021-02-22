@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <View
+                android:id="@+id/v_statebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent" />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_bar_height"
+                android:background="@color/white">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="个人中心"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/v_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    android:text="设置"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dark_gray"
+                    android:orientation="vertical">
+
+                <!--个人信息-->
+                <LinearLayout
+                        android:id="@+id/panel_personal_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_gray"
+                        android:gravity="center_vertical"
+                        android:padding="10dp">
+
+                    <ImageView
+                            android:id="@+id/v_head_photo"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter" />
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:id="@+id/v_petname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="昵称"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        <TextView
+                                android:id="@+id/v_signature"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="签名"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <co.lujun.androidtagview.TagContainerLayout
+                        android:id="@+id/tag_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:container_background_color="@color/transparent"
+                        app:tag_background_color="@color/white"
+                        app:tag_border_color="@color/dark_gray"
+                        app:tag_border_width="2dp"
+                        app:tag_clickable="false"
+                        app:tag_corner_radius="5dp"
+                        app:tag_horizontal_padding="5dp"
+                        app:tag_text_color="#66000000"
+                        app:tag_text_size="14sp" />
+
+            </LinearLayout>
+
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white">
+
+                <TableRow android:layout_height="@dimen/my_tab_row_height">
+
+                    <TextView
+                            android:id="@+id/v_group_i_join"
+                            style="@style/my_grid_item_txt_style"
+                            android:text="我加入的团" />
+
+                    <TextView
+                            android:id="@+id/v_group_i_start"
+                            style="@style/my_grid_item_txt_style"
+                            android:layout_marginLeft="@dimen/my_grid_item_horiz_divider"
+                            android:text="我打开的团" />
+
+                    <TextView
+                            android:id="@+id/v_examine_activity"
+                            style="@style/my_grid_item_txt_style"
+                            android:layout_marginLeft="@dimen/my_grid_item_horiz_divider"
+                            android:text="审批报名活动" />
+                </TableRow>
+
+                <TableRow
+                        android:layout_height="@dimen/my_tab_row_height"
+                        android:layout_marginTop="@dimen/my_grid_item_vertical_divider">
+
+                    <TextView
+                            android:id="@+id/v_collected_activity"
+                            style="@style/my_grid_item_txt_style"
+                            android:layout_height="match_parent"
+                            android:text="收藏和关注的活动" />
+
+                    <TextView
+                            android:id="@+id/v_create_advice"
+                            style="@style/my_grid_item_txt_style"
+                            android:layout_marginLeft="@dimen/my_grid_item_horiz_divider"
+                            android:text="我创建的征求" />
+
+                    <TextView
+                            android:id="@+id/v_signup_advice"
+                            style="@style/my_grid_item_txt_style"
+                            android:layout_marginLeft="@dimen/my_grid_item_horiz_divider"
+                            android:text="我报名的征求" />
+                </TableRow>
+
+                <TableRow
+                        android:layout_height="@dimen/my_tab_row_height"
+                        android:layout_marginTop="@dimen/my_grid_item_vertical_divider">
+
+                    <TextView
+                            android:id="@+id/v_examine_regist"
+                            style="@style/my_grid_item_txt_style"
+                            android:text="审批征求报名" />
+
+                    <TextView
+                            android:id="@+id/v_apply_for_group"
+                            style="@style/my_grid_item_txt_style"
+                            android:layout_marginLeft="@dimen/my_grid_item_horiz_divider"
+                            android:text="入群申请" />
+
+                    <TextView
+                            android:id="@+id/v_my_dynamics"
+                            style="@style/my_grid_item_txt_style"
+                            android:layout_marginLeft="@dimen/my_grid_item_horiz_divider"
+                            android:text="我的动态" />
+                </TableRow>
+
+                <TableRow
+                        android:layout_height="@dimen/my_tab_row_height"
+                        android:layout_marginTop="@dimen/my_grid_item_vertical_divider">
+
+                    <TextView
+                            android:id="@+id/v_circle_content_manage"
+                            style="@style/my_grid_item_txt_style"
+                            android:text="圈子内容管理" />
+
+                    <TextView
+                            android:id="@+id/v_mail_list"
+                            style="@style/my_grid_item_txt_style"
+                            android:layout_marginLeft="@dimen/my_grid_item_horiz_divider"
+                            android:text="通讯录" />
+
+                    <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/my_grid_item_horiz_divider"
+                            android:layout_weight="1"
+                            android:background="@color/transparent" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

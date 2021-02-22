@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/v_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="取消"/>
+
+        <TextView
+                android:id="@+id/v_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:text="确定"/>
+
+    </RelativeLayout>
+
+    <com.aigestudio.wheelpicker.WheelPicker
+            android:id="@+id/v_constellation_picker"
+            android:layout_width="match_parent"
+            app:wheel_atmospheric="true"
+            app:wheel_curved="false"
+            app:wheel_cyclic="false"
+            app:wheel_indicator="false"
+            app:wheel_data="@array/constellation_array"
+            app:wheel_visible_item_count="2"
+            app:wheel_item_align="center"
+            app:wheel_item_text_color="#A7A7DB"
+            app:wheel_curtain="true"
+            app:wheel_item_text_size="18sp"
+            app:wheel_selected_item_position="0"
+            app:wheel_selected_item_text_color="#536D8A"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

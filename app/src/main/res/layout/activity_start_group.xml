@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/activity_header"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                            android:text="活动名称"
+                            style="@style/start_group_left_txt_style"/>
+
+                    <EditText
+                            android:id="@+id/input_group_name"
+                            style="@style/start_group_right_txt_style"
+                            android:hint="限20字"/>
+                </TableRow>
+
+                <TableRow
+                        android:layout_marginTop="@dimen/start_group_row_top_margin">
+
+                    <TextView
+                            android:text="活动类型"
+                            style="@style/start_group_left_txt_style"/>
+
+                    <LinearLayout
+                            android:id="@+id/panel_group_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        <TextView
+                                android:id="@+id/input_group_type"
+                                style="@style/start_group_right_txt_style"
+                                android:text="活动组团"/>
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:scaleType="fitCenter"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_marginTop="@dimen/start_group_row_top_margin">
+
+                    <TextView
+                            android:text="性别要求"
+                            style="@style/start_group_left_txt_style"/>
+
+                    <LinearLayout
+                            android:id="@+id/panel_gender_require"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        <TextView
+                                android:id="@+id/input_gender_require"
+                                style="@style/start_group_right_txt_style"
+                                android:text="请选择"/>
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:scaleType="fitCenter"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="@dimen/start_group_row_top_margin">
+
+                    <TextView
+                            android:text="费用"
+                            style="@style/start_group_left_txt_style"/>
+
+                    <LinearLayout
+                            android:id="@+id/panel_group_cost"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        <TextView
+                                android:id="@+id/input_group_cost"
+                                style="@style/start_group_right_txt_style"
+                                android:text="请选择"/>
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:scaleType="fitCenter"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </TableRow>
+
+
+                <TableRow android:layout_marginTop="@dimen/start_group_row_top_margin">
+
+                    <TextView
+                            android:text="人均金额"
+                            style="@style/start_group_left_txt_style"/>
+
+                    <EditText
+                            android:id="@+id/input_per_amount"
+                            style="@style/start_group_right_txt_style"
+                            android:inputType="number"/>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="@dimen/start_group_row_top_margin">
+
+                    <TextView
+                            android:text="征集人数"
+                            style="@style/start_group_left_txt_style"/>
+
+                    <EditText
+                            android:id="@+id/input_collect_number"
+                            android:inputType="number"
+                            style="@style/start_group_right_txt_style"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                    android:text="下一步"
+                    style="@style/init_btn_login_style"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/btn_next"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

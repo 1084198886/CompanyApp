@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/v_head_photo"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="200dp"/>
+
+    <TextView
+            android:id="@+id/v_petname"
+            android:layout_width="wrap_content"
+            android:text="昵称"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/v_advice_name"
+            android:layout_width="wrap_content"
+            android:text="征求名称"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/v_join_number"
+            android:layout_width="match_parent"
+            android:text="报名人数"
+            android:gravity="center_vertical|right"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

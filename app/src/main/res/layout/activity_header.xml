@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:background="@color/light_gray"
+              android:layout_height="wrap_content">
+
+    <View
+            android:id="@+id/v_statebar"
+            android:layout_width="match_parent"
+            android:background="@color/transparent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/panel_header"
+            android:layout_height="@dimen/title_bar_height">
+
+        <ImageView
+                android:id="@+id/v_title_back"
+                android:layout_width="wrap_content"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:src="@drawable/loading_white"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/v_title"
+                android:text="标题"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+        <TextView
+                android:id="@+id/v_right"
+                android:text="右侧"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:paddingLeft="30dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

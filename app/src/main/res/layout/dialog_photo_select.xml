@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/v_album"
+            style="@style/dialog_sex_select_txt_style"
+            android:text="相册"/>
+
+    <TextView
+            android:id="@+id/v_camera"
+            style="@style/dialog_sex_select_txt_style"
+            android:text="拍照"/>
+
+    <TextView
+            android:id="@+id/v_cancel"
+            style="@style/dialog_sex_select_txt_style"
+            android:text="取消"/>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/activity_header"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content">
+
+            <com.sj.app.view.KeywordsFlow
+                    android:id="@+id/keywordsFlow"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
+
+            <Button
+                    android:text="进入觅友"
+                    style="@style/init_btn_login_style"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/v_enter"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

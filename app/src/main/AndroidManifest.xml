@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.sj.app">
+
+    <uses-permission
+            android:name="android.permission.WRITE_SETTINGS"
+            tools:ignore="ProtectedPermissions"/>
+    <uses-permission
+            android:name="android.permission.WRITE_SECURE_SETTINGS"
+            tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission
+            android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+            tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <uses-permission
+            android:name="android.permission.REAL_GET_TASKS"
+            tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+
+    <application
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:name=".activities.SPApplication"
+            android:supportsRtl="true"
+            android:theme="@style/activity_default_style"
+            tools:ignore="GoogleAppIndexingWarning">
+
+        <!--高德定位-->
+        <service android:name="com.amap.api.location.APSService"/>
+        <!--开发者申请的key-->
+        <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="36777bcbccfba458cb362c2f7d672858"/>
+
+        <!--FileProvider共享文件、缓存-->
+        <!--android:authorities 属性值要和代码中
+        FileProvider.getUriForFile（）的第二个参数值保持一致-->
+        <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="com.sj.app.provider"
+                android:exported="false"
+                tools:replace="android:authorities"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    tools:replace="android:resource"
+                    android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+                android:name=".activities.home.HomeActivity"
+                android:theme="@style/DefaultCityPickerTheme"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--   <activity
+                   android:name=".activities.init.InitActivity"
+                   android:screenOrientation="portrait"
+                   android:launchMode="singleTask"/>-->
+        <!-- <activity
+         android:name=".activities.home.HomeActivity"
+         android:screenOrientation="portrait"/>-->
+        <activity
+                android:name=".activities.init.protocol.ProtocolActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.init.resetPwd.ResetPwdActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.init.bindPhone.BindPhoneActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.init.perfectInfo.PerfectInfoActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.init.labelSelect.LabelSelectActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.main.filter.FilterActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.main.search.SearchActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.main.userInfo.UserInfoActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.settting.SettingActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.feedBack.FeedBackActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.realnameAuth.RealNameAuthActivity"
+                android:screenOrientation="portrait"
+                />
+        <activity
+                android:name=".activities.home.my.userCenter.UserCenterActivity"
+                android:screenOrientation="portrait"
+                />
+        <activity
+                android:name=".activities.home.advice.startGroup.StartGroupActivity"
+                android:screenOrientation="portrait"
+                />
+        <activity
+                android:name=".activities.home.my.groupMyJoin.GroupMyJoinActivity"
+                android:screenOrientation="portrait"
+                />
+        <activity
+                android:name=".activities.home.my.groupMyStart.GroupMyStartActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.examineActivity.ExamineActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.activityCollect.CollectAttentionActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.activityDetail.ActivityDetailActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.adviceMyCreate.AdviceMyCreateActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.adviceMyJoin.AdviceMyJoinActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.applyForGroup.ApplyForGroupActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".activities.home.my.videoTest.VideoTestActivity"/>
+        <activity
+                android:name=".activities.home.my.myDynamic.MyDynamicActivity"
+                android:theme="@style/activity_appcompat_style"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.publishDynamic.PublishDynamicActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activities.home.my.myPublishGroup.MyPublishGroupActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".activities.home.my.mailList.MailListActivity"/>
+
+        <service android:name=".service.BackgroundTaskService"/>
+    </application>
+
+</manifest>

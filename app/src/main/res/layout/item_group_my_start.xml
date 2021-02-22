@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/v_head_photo"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="180dp"/>
+
+    <ImageView
+            android:id="@+id/v_select"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@+id/v_head_photo"
+            android:layout_alignRight="@+id/v_head_photo"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/v_petname"
+            android:layout_width="wrap_content"
+            android:text="昵称"
+            android:layout_below="@+id/v_head_photo"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/v_activity_name"
+            android:layout_width="wrap_content"
+            android:text="征求名称"
+            android:layout_below="@+id/v_petname"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|right"
+            android:layout_below="@+id/v_activity_name"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/v_attention_number"
+                style="@style/item_group_my_start_txt_style"
+                android:text="0人关注"/>
+
+        <TextView
+                android:id="@+id/v_join_number"
+                style="@style/item_group_my_start_txt_style"
+                android:text="0人报名"/>
+    </LinearLayout>
+
+</RelativeLayout>

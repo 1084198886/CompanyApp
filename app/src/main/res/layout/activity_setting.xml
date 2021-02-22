@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/activity_header"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:id="@+id/panel_real_name_auth"
+                    android:layout_marginTop="20dp"
+                    style="@style/setting_item_panel_style">
+
+                <TextView
+                        style="@style/setting_item_txt_style"
+                        android:text="实名制认证"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/panel_feedback"
+                    android:layout_marginTop="20dp"
+                    style="@style/setting_item_panel_style">
+
+                <TextView
+                        style="@style/setting_item_txt_style"
+                        android:text="意见反馈"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/panel_modify_pwd"
+                    android:layout_marginTop="20dp"
+                    style="@style/setting_item_panel_style">
+
+                <TextView
+                        style="@style/setting_item_txt_style"
+                        android:text="修改密码"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/panel_refuse_private_letter"
+                    android:layout_marginTop="20dp"
+                    style="@style/setting_item_panel_style">
+
+                <TextView
+                        style="@style/setting_item_txt_style"
+                        android:text="不接收陌生人的私信"/>
+
+                <com.suke.widget.SwitchButton
+                        android:id="@+id/switch_recv_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/panel_login_out"
+                    android:layout_marginTop="20dp"
+                    style="@style/setting_item_panel_style">
+
+                <TextView
+                        style="@style/setting_item_txt_style"
+                        android:text="退出登录"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

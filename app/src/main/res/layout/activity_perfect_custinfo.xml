@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/activity_header"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/init_panel_horiz_margin"
+                android:paddingRight="@dimen/init_panel_horiz_margin"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="40dp"
+                    android:layout_height="wrap_content">
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            style="@style/init_login_input_label_style"
+                            android:text="昵称"/>
+
+                    <EditText
+                            style="@style/init_login_input_style"
+                            android:id="@+id/input_pet_name"/>
+                </TableRow>
+
+                <TableRow
+                        android:id="@+id/panel_sex"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            style="@style/init_login_input_label_style"
+                            android:text="性别"/>
+
+                    <TextView
+                            style="@style/perfect_custinfo_right_txt_style"
+                            android:id="@+id/input_sex"/>
+
+                    <ImageView
+                            android:layout_width="10dp"
+                            android:src="@drawable/loading_white"
+                            android:layout_height="10dp"/>
+                </TableRow>
+
+                <TableRow
+                        android:id="@+id/panel_age"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            style="@style/init_login_input_label_style"
+                            android:text="年龄"/>
+
+                    <TextView
+                            style="@style/perfect_custinfo_right_txt_style"
+                            android:id="@+id/input_age"/>
+
+                    <ImageView
+                            android:layout_width="10dp"
+                            android:src="@drawable/loading_white"
+                            android:layout_height="10dp"/>
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        style="@style/init_login_input_label_style"
+                        android:text="头像"/>
+
+                <ImageView
+                        android:id="@+id/v_head_photo"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"/>
+            </LinearLayout>
+
+            <Button
+                    android:text="下一步"
+                    style="@style/init_btn_login_style"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/btn_next"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

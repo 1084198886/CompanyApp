@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/activity_header"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:text="国徽面"
+                    android:layout_height="wrap_content"/>
+
+            <ImageView
+                    android:id="@+id/v_idcard_national_emblem"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:text="头像面"
+                    android:layout_height="wrap_content"/>
+
+            <ImageView
+                    android:id="@+id/v_idcard_head_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            <Button
+                    android:id="@+id/btn_commit"
+                    android:text="提交"
+                    style="@style/init_btn_login_style"
+                    android:layout_marginTop="40dp"
+                    />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
